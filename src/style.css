@@ -1,0 +1,59 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft YaHei", sans-serif;
+}
+
+html,
+body {
+	height: 100%;
+	color: #324558;
+	background-color: #e4ebf1;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5 {
+	font-size: 16px;
+	font-weight: normal;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+a {
+	outline: none;
+	color: inherit;
+}
+
+ul > li {
+	list-style: none;
+}
+
+.blod {
+	font-weight: 700;
+}
+
+.clear::after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+/* 滚动条css */
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(144, 147, 153, 0.5);
+	border-radius: 3px;
+}
