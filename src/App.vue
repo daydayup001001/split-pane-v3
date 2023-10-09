@@ -1,6 +1,6 @@
 <template>
 	<div style="height: 100%">
-		<split-pane :min-percent="0" :default-percent="20" split="vertical">
+		<split-pane :min-percent="0" :default-percent="20" split="vertical" class-name="ggggg">
 			<template v-slot:paneL> vertical-A </template>
 			<template v-slot:paneR>
 				<split-pane split="horizontal" :default-percent="75">
@@ -19,7 +19,8 @@
 
 <script setup lang="ts">
 import { defineAsyncComponent } from "vue";
-const SplitPane = defineAsyncComponent(() => import("@/components/SplitPane/index.vue"));
+const SplitPane = defineAsyncComponent(() => import("split-pane-v3"));
+// import moduleName from 'split-pane-v3';
 </script>
 
 <style lang="scss"></style>
