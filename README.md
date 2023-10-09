@@ -2,6 +2,8 @@
 
 [中文文档README.zh_CN.md](./README.zh_CN.md)
 
+## [demo](https://daydayup001001.github.io/split-pane-v3/)
+
 ## About
 
 -   Split-pane-v3 is a split panel component based on VUE3+TS, this component functions similar to 'vscode' panel splitting, commonly found in online code editors! [According to turn](https://github.com/PanJiaChen/vue-split-pane),this can be understood as the Vue3 version of the project.

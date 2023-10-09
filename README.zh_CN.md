@@ -1,5 +1,7 @@
 # split-pane-v3
 
+## [demo](https://daydayup001001.github.io/split-pane-v3/)
+
 ## 简介
 
 -   split-pane-v3 是一个基于 VUE3+TS 的分割面板组件，此组件功能类似于`vscode`的面板分割，常见于在线代码编辑器！根据大佬的[项目](https://github.com/PanJiaChen/vue-split-pane)而来，这个可以理解为该项目的 Vue3 版本。
