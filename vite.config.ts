@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import { resolve,join } from "path";
+import { resolve, join } from "path";
 import vue from "@vitejs/plugin-vue";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
@@ -26,6 +26,10 @@ const viteConfig = defineConfig(() => {
 			}),
 		],
 		resolve: { alias },
+		base: "/split-pane-v3/",
+		build: {
+			outDir: "docs",
+		},
 	};
 });
 // https://vitejs.dev/config/
