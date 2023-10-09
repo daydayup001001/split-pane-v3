@@ -1,18 +1,61 @@
-# Vue 3 + TypeScript + Vite
+# split-pane-v3
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+[中文文档README.zh_CN.md](./README.zh_CN.md)
 
-## Recommended IDE Setup
+## About
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+-   Split-pane-v3 is a split panel component based on VUE3+TS, this component functions similar to 'vscode' panel splitting, commonly found in online code editors! [According to turn](https://github.com/PanJiaChen/vue-split-pane),this can be understood as the Vue3 version of the project.
 
-## Type Support For `.vue` Imports in TS
+## Get Start
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+> download
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+`npm install split-pane-v3 --save`
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+or
+
+`npm i split-pane-v3 -S`
+
+```html
+<template>
+	<split-pane :min-percent="0" :default-percent="20" split="vertical">
+		<template v-slot:paneL> vertical-A </template>
+		<template v-slot:paneR>
+			<split-pane split="horizontal" :default-percent="75">
+				<template v-slot:paneL> horizontal-B </template>
+				<template v-slot:paneR>
+					<split-pane split="vertical" :default-percent="75">
+						<template v-slot:paneL> vertical-C </template>
+						<template v-slot:paneR> vertical-D </template>
+					</split-pane>
+				</template>
+			</split-pane>
+		</template>
+	</split-pane>
+</template>
+
+<script setup lang="ts">
+	import { defineAsyncComponent } from "vue";
+	const SplitPane = defineAsyncComponent(() => import("split-pane-v3"));
+</script>
+```
+
+> ---
+
+## Options
+
+| IDX | Name           | Type   | default | explain                                                                      |
+| --- | -------------- | ------ | ------- | ---------------------------------------------------------------------------- |
+| 1   | minPercent     | Number | 10      | Minimum value of the current panel (%)                                       |
+| 2   | defaultPercent | Number | 50      | Default display value of the current panel (%)                               |
+| 3   | split          | String | -       | The display mode of the current panel can be upper or lower or left or right |
+| 4   | class-name     | String | -       | The class name of the split gesture for the current panel                    |
+
+> ---
+
+## slot
+
+| IDX | Name  | explain                                         |
+| --- | ----- | ----------------------------------------------- |
+| 1   | paneL | First slot inside split panel (left or top)     |
+| 2   | paneR | First slot inside split panel (right or bottom) |
