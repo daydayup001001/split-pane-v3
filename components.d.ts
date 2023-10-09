@@ -11,8 +11,6 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Pane: typeof import('./src/components/SplitPane/pane.vue')['default']
     Resizer: typeof import('./src/components/SplitPane/resizer.vue')['default']
-    RouterLink: typeof import('vue-router')['RouterLink']
-    RouterView: typeof import('vue-router')['RouterView']
     SplitPane: typeof import('./src/components/SplitPane/index.vue')['default']
   }
 }

@@ -10,9 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "split-pane-v3": "^1.0.0",
-    "vue": "^3.2.47",
-    "vue-router": "^4.1.6"
+    "vue": "^3.2.47"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",

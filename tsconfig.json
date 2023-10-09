@@ -17,7 +17,7 @@
 			"@/*": ["src/*"]
 		},
 		"allowJs": true,
-		"types": ["vite/client", "vue","element-plus/global"],
+		"types": ["vite/client", "vue"],
 		"allowSyntheticDefaultImports": true,
 		"forceConsistentCasingInFileNames": true,
 		"experimentalDecorators": true
