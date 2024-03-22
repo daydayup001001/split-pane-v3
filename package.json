@@ -1,7 +1,7 @@
 {
   "name": "split-pane-v3",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.1.2",
   "description": "A split panel for vue3, using TS",
   "type": "module",
   "scripts": {
